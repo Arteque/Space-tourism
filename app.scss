@@ -4,11 +4,55 @@
     padding:0;
     box-sizing:border-box;
 }
+$clrs:(
+  dark:hsl(230, 35%, 7%),
+  smoke: hsl(231, 77%, 90%),
+  white: hsl(0, 0%, 100%)
+);
 //Vars
 :root{
-  --sans: "Barlow Condensed", sans-serif;
-  --serif: font-family: "Bellefair", serif;
-  --bg-clr: hsl(230, 35%, 7%);
-  --sub-clr:  hsl(231, 77%, 90%);
-  --main-clr: hsl(0, 0%, 100%);
+  --barlow: "Barlow Condensed", sans-serif;
+  --bellefaire: font-family: "Bellefair", serif;
+  @each $clr, $vl in $clrs{
+    --#{$clr}:#{$vl};
+  }
+}
+
+
+//Elements
+.txt-150{
+  font-size: 150px;
+}
+.txt-100{
+  font-size: 100px;
+}
+.txt-56{
+  font-size: 56px;
+}
+.txt-32{
+  font-size:32px;
+}
+.txt-28{
+  font-size: 28px;
+}
+.txt{
+  font-size: 16px;
+}
+.txt-14{
+  font-size: 14px;
+}
+.bellefair{
+  font-family: var(--bellefaire);
+}
+.barlow{
+  font-family: var(--barlow);
+}
+.lettspace-4-75{
+  letter-spacing: 4.75px;
+}
+.lettspace-2-7{
+  letter-spacing: 2.7px;
+}
+.lettspace-2-35{
+  letter-spacing: 2.35px;
 }
