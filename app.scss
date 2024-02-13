@@ -1,5 +1,14 @@
+//Reset
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+//Vars
+:root{
+  --sans: "Barlow Condensed", sans-serif;
+  --serif: font-family: "Bellefair", serif;
+  --bg-clr: hsl(230, 35%, 7%);
+  --sub-clr:  hsl(231, 77%, 90%);
+  --main-clr: hsl(0, 0%, 100%);
 }
