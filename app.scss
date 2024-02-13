@@ -5,10 +5,19 @@
     box-sizing:border-box;
 }
 $clrs:(
-  dark:hsl(230, 35%, 7%),
+  dark: hsl(230, 35%, 7%),
   smoke: hsl(231, 77%, 90%),
-  white: hsl(0, 0%, 100%)
+  white: hsl(0, 0%, 100%),
+  hover: hsla(0, 0%, 100%, 0.5)
 );
+//Mixin Breakpoints
+@mixin tablet{
+  @media screen and (min-width: 768px){@content;}
+}
+
+@mixin desktop{
+  @media screen and (min-width: 900px){@content;}
+}
 //Vars
 :root{
   --barlow: "Barlow Condensed", sans-serif;
@@ -18,6 +27,19 @@ $clrs:(
   }
 }
 
+//Text Colors
+@each $clr, $vl in $clrs{
+  .txt-#{$clr}{
+    color: var(--#{$clr});
+  }
+}
+
+//Background Colors
+@each $clr, $vl in $clrs{
+  .bg-#{$clr}{
+    background-color: var(--#{$clr});
+  }
+}
 
 //Elements
 .txt-150{

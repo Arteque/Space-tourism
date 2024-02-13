@@ -11,6 +11,39 @@
   --dark:hsl(230, 35%, 7%);
   --smoke:hsl(231, 77%, 90%);
   --white:hsl(0, 0%, 100%);
+  --hover:hsla(0, 0%, 100%, 0.5);
+}
+
+.txt-dark {
+  color: var(--dark);
+}
+
+.txt-smoke {
+  color: var(--smoke);
+}
+
+.txt-white {
+  color: var(--white);
+}
+
+.txt-hover {
+  color: var(--hover);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-smoke {
+  background-color: var(--smoke);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-hover {
+  background-color: var(--hover);
 }
 
 .txt-150 {
