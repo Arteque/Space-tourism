@@ -3,4 +3,63 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+}
+
+:root {
+  --barlow: "Barlow Condensed", sans-serif;
+  --bellefaire: font-family: "Bellefair", serif;
+  --dark:hsl(230, 35%, 7%);
+  --smoke:hsl(231, 77%, 90%);
+  --white:hsl(0, 0%, 100%);
+}
+
+.txt-150 {
+  font-size: 150px;
+}
+
+.txt-100 {
+  font-size: 100px;
+}
+
+.txt-56 {
+  font-size: 56px;
+}
+
+.txt-32 {
+  font-size: 32px;
+}
+
+.txt-28 {
+  font-size: 28px;
+}
+
+.txt {
+  font-size: 16px;
+}
+
+.txt-14 {
+  font-size: 14px;
+}
+
+.bellefair {
+  font-family: var(--bellefaire);
+}
+
+.barlow {
+  font-family: var(--barlow);
+}
+
+.lettspace-4-75 {
+  letter-spacing: 4.75px;
+}
+
+.lettspace-2-7 {
+  letter-spacing: 2.7px;
+}
+
+.lettspace-2-35 {
+  letter-spacing: 2.35px;
+>>>>>>> 5c1e445212eb8fe247107475fda73899673bcf9e
 }/*# sourceMappingURL=app.css.map */
