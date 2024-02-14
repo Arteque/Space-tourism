@@ -338,14 +338,14 @@ p {
 }
 
 #hero-section {
-  background-image: url(./_Public/home/background-home-mobile.jpg);
+  background-image: url(./home/background-home-mobile.jpg);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 768px) {
   #hero-section {
-    background-image: url(./_Public/home/background-home-tablet.jpg);
+    background-image: url(./home/background-home-tablet.jpg);
   }
 }
 #hero-section .content {

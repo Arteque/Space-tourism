@@ -282,12 +282,12 @@ p{
 }
 //hero-section-start
 #hero-section{
-  background-image:url(./_Public/home/background-home-mobile.jpg);
+  background-image:url(./home/background-home-mobile.jpg);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   @include tablet{
-    background-image:url(./_Public/home/background-home-tablet.jpg);
+    background-image:url(./home/background-home-tablet.jpg);
   }
   .content{
     max-width: 447px;
