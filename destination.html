@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
-    <title>Space Tourism Home</title>
+    <title>Space Tourism | Destintations</title>
 </head>
-<body>
+<body class="subpage destination">
     <!-- Website h1 is hidden     -->
     <h1 class="hide-it">Space Tourism</h1>
     
@@ -39,13 +39,13 @@
                 <!-- Main Navigation -->
                 <nav id="main-nav-container">
                     <ul class="main-nav-ul">
-                        <li class="current">
+                        <li>
                             <a class="d-block txt-white txt-16 barlow lettspace-2-7" href="index.html">
                                 <span class="index txt-800">00</span>
                                 <span class="text txt-uppercase d-inline-block">Home</span>
                             </a>
-                        </li>
-                        <li>
+                        </li >
+                        <li class="current">
                             <a class="d-flex gap txt-white txt-16 barlow lettspace-2-7" href="destination.html">
                                 <span class="index txt-800">01</span>
                                 <span class="text txt-uppercase">Destintation</span>
@@ -74,27 +74,65 @@
     <main>
         <article>
             <!-- The section tag element contains the background-image the app.css file-->
-            <section id="hero-section">
+            <section id="hero-section" class="destination-subpage">
                 <div class="wrapper d-flex">
                     <div class="content">
-                        <h2>
-                            <span class="txt-uppercase d-block barlow txt-smoke txt-500 lettspace-2-7">
-                                So, you want to travel to
+                        <h2 class="txt-white barlow lettspace-2-7 txt-400">
+                            <span class="index txt-white-50">
+                                01
                             </span>
-                            <span class="txt-uppercase bellefair txt-white main-title d-block">
-                                Space
+                            <span class="txt-uppercase">
+                                Pick your destination
                             </span>
                         </h2>
-                        <p class="barlow txt-smoke txt-300">
-                            Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-                        </p>
-                    </div>
-                    <div class="call-to-action">
-                        <a href="">
-                            <span class="text">
-                                Explore
-                            </span>
-                        </a>
+                        <div class="slider-media-container">
+                            <div class="media moon current" >
+                                <img src="./destination/image-moon.webp" alt="Moon">
+                            </div>
+                            <div class="media mars" >
+                                <img src="./destination/image-mars.webp" alt="Mars">
+                            </div>
+                            <div class="media europa">
+                                <img src="./destination/image-europa.webp" alt="Europa">
+                            </div>
+                            <div class="media">
+                                <img src="./destination/image-titan.webp" alt="Titan">
+                            </div>
+                        </div>
+                        <div class="slider-nav-container">
+                            <ul>
+                                <li class="current">
+                                    <span class="text">
+                                        Moon
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="text">
+                                        Mars
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="text">
+                                        Europa
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="text">
+                                        Titan
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slider-text-container">
+                            <h3>                        
+                                <span class="txt-uppercase bellefair txt-white main-title d-block">
+                                    MOON
+                                </span>
+                            </h3>
+                            <p class="barlow txt-smoke txt-300">
+                                See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
