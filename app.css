@@ -505,6 +505,11 @@ p {
   }
 }
 
+.destination-subpage {
+  -webkit-padding-before: 6rem;
+          padding-block-start: 6rem;
+}
+
 .sub-section-main-title span.index {
   -webkit-margin-end: 1rem;
           margin-inline-end: 1rem;

@@ -433,7 +433,11 @@ p{
 }
 
 //Subpage
+.destination-subpage{
+  padding-block-start: 6rem;
+}
 .sub-section-main-title{
+
   span{
     &.index{
       margin-inline-end:1rem;
@@ -489,7 +493,4 @@ p{
     font-size: 28px;
     font-family:var(--bellefair);
   }
-}
-*{
-  // background-color:#ffffff20;
 }
