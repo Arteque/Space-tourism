@@ -6,15 +6,103 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="Style/app.css.map">
+    <link rel="stylesheet" href="Style/app.css">
     <title>Space Tourism Home</title>
 </head>
 <body>
     <!-- Website h1 is hidden     -->
     <h1 class="hide-it">Space Tourism</h1>
     
-    
+    <!-- Header -->
+        <header id="main-header">
+            <div class="top-header">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="/index.html">
+                        <img src="./shared/logo.svg" alt="Space Tourism Logo">
+                    </a>
+                </div>
+                <!-- Logo -->
+                <!-- Menu Icon -->
+                <div class="burger-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+                        <g fill="#D0D6F9" fill-rule="evenodd">
+                            <path id="line-1" d="M0 0h24v3H0z"/>
+                            <path id="line-2" d="M0 9h24v3H0z"/>
+                            <path id="line-3" d="M0 18h24v3H0z"/>
+                        </g>
+                    </svg>
+                </div>
+                <!-- Menu Icon -->
+            </div>
+            <div class="wrapper">
+                <!-- Main Navigation -->
+                <nav id="main-nav-container">
+                    <ul class="main-nav-ul">
+                        <li>
+                            <a class="big-padding uppercase current" href="index.html">
+                                <span class="index">00</span>
+                                <span class="text d-inline-block">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="big-padding uppercase" href="destination.html">
+                                <span class="index">01</span>
+                                <span class="text">Destintation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="big-padding uppercase" href="crew.html">
+                                <span class="index">02</span>
+                                <span class="text">Crew</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="big-padding uppercase" href="technology.html">
+                                <span class="index">03</span>
+                                <span class="text">Technology</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Main Navigation -->
+            </div>
+        </header>
+    <!-- Header -->
 
-    <script src="app.js"></script>
-</body>
+    <!-- Main Content -->
+    <main>
+        <article>
+            <!-- The section tag element contains the background-image the app.css file-->
+            <section id="hero-section" class="start-page">
+                <div class="wrapper d-flex">
+                    <div class="content">
+                        <h2>
+                            <span class="subheadline">
+                                So, you want to travel to
+                            </span>
+                            <span class="headline">
+                                Space
+                            </span>
+                        </h2>
+                        <p class="paragraph">
+                            Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+                        </p>
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">
+                            <span class="text">
+                                Explore
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <!-- Main Content -->
+
+    <script src="Script/app.js"></script>
+</body>  
 </html>

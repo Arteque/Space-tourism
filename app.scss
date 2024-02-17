@@ -1,9 +1,4 @@
-//Reset
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+// Colors
 $clrs:(
   dark: hsl(230, 35%, 7%),
   smoke: hsl(231, 77%, 90%),
@@ -11,14 +6,22 @@ $clrs:(
   white-50: hsla(0, 0%, 100%, 0.5),
   white-10: hsla(0, 0%, 100%, 0.1)
 );
-//Mixin Breakpoints
+//Breakpoints
 @mixin tablet{
-  @media screen and (min-width: 768px){@content;}
+  @media screen and (min-width: 700px){@content;}
 }
 
 @mixin desktop{
-  @media screen and (min-width: 1235px){@content;}
+  @media screen and (min-width: 1000px){@content;}
 }
+
+//Reset
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 //Vars
 :root{
   --barlow: "Barlow Condensed", sans-serif;
@@ -42,3 +45,187 @@ $clrs:(
   }
 }
 
+//Global
+a{
+  text-decoration: none;
+  display:inline-block;
+  font-family: var(--barlow);
+  color: var(--white);
+  letter-spacing: 0.2ch;
+  position:relative;
+  &.big-padding{
+    padding-block:10px;
+    margin-block:10px;
+    @include tablet{
+      padding-block:52px;
+      .index{
+        display:none;
+      }
+    }
+  }
+  &.small-padding{
+    padding-block:17px;
+  }
+  .index{
+    font-weight: bolder;
+    padding-inline-end: 0.5rem;
+  }
+}
+ul[class]{
+  list-style: none;
+}
+// Components
+.hide-it{
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.headline{
+  font-family: var(--bellefair);
+}
+.subheadline, .paragraph{
+  font-family: var(--barlow);
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.wrapper{
+  padding-inline:1rem;
+}
+
+.burger-container{
+  path{
+    transform-origin: center;
+    transition: var(--transition);
+  }
+  &.show{
+    path{
+      &:nth-of-type(1){
+        transform:translate(-25%, 30%) rotate(50deg);;
+      }
+      &:nth-of-type(2){
+        transform:scaleX(0);
+        opacity: 0; 
+      }
+      &:nth-of-type(3){
+        transform:translate(-25%, -25%) rotate(-50deg);;
+      }
+    }
+  }
+  //tablet view 
+  @include tablet{
+    display: none;
+  }
+}
+
+nav{
+  a{
+    width: 100%;
+    &::after{
+      content:"";
+      background-color:var(--white);
+      position:absolute;
+    }
+    //Main Nav A Elements
+    &.big-padding{
+      //Mobile View
+      //normal State
+      &::after{
+        width: 3px;
+        top: 0;
+        height: 100%;
+        right: 0;
+        opacity: 0;
+        transition: var(--transition);
+        //After Element
+        //Tabletview
+        @include tablet{
+          width:100%;
+          top:auto;
+          height: 3px;
+          left: 0;
+          bottom:0
+        }    
+      }
+    }
+    //Current State
+    &.current{
+      &::after{
+        opacity: 1;
+      }
+    }
+  }
+}
+header{
+  &#main-header{
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .top-header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999999;
+  }
+  nav{
+    position:absolute;
+    right: -110%;
+    top: 0;
+    width: 70%;
+    height: 100svh;
+    padding-block-start: 20vh;
+    background-color:var(--white-10);
+    backdrop-filter:blur(20px);
+    scroll-behavior: auto;
+    transition: var(--transition);
+    a{
+      padding-inline-start: 2rem;
+    }
+    &.show{
+      right: 0;
+    }
+    // Tablet View
+    @include tablet{
+      right:0;
+      height:auto;
+      padding-block-start: unset;
+      ul{
+        display:flex;
+        gap: 3rem;
+        padding-inline-start: 3rem;
+        
+        a{
+          &.big-padding{
+            margin-block:0;
+            padding-inline-start:unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+section{
+  &#hero-section{
+    // Background Images
+    &.start-page{
+      background-image: url(/home/background-home-mobile.jpg);
+      background-size: cover;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      @include tablet{
+        background-image: url(/home/background-home-tablet.jpg);
+      }
+      @include desktop{
+        background-image: url(/home/background-home-desktop.jpg);
+      }
+    }
+  }
+  min-height: 100svh;
+}
