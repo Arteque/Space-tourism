@@ -96,6 +96,7 @@ ul[class]{
 }
 
 .burger-container{
+  pointer-events: all;
   path{
     transform-origin: center;
     transition: var(--transition);
@@ -165,6 +166,7 @@ header{
     right: 0;
     top: 0;
     padding: 2rem 2rem 0 2rem;
+    pointer-events: none;
   }
   .top-header{
     display:flex;
@@ -184,6 +186,7 @@ header{
     backdrop-filter:blur(20px);
     scroll-behavior: auto;
     transition: var(--transition);
+    pointer-events: all;
     a{
       padding-inline-start: 2rem;
     }
@@ -195,11 +198,28 @@ header{
       right:0;
       height:auto;
       padding-block-start: unset;
+      background-color:transparent;
+      backdrop-filter:unset;
+      max-width: 1235px;
+      &::after{
+        content:"";
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: var(--white-10);
+        backdrop-filter: blur(20px);
+        z-index: 10;
+      }
       ul{
         display:flex;
+        width: fit-content;
         gap: 3rem;
         padding-inline-start: 3rem;
-        
+        z-index: 20;
+        position: relative;
+        margin-inline-start:auto;
         a{
           &.big-padding{
             margin-block:0;
