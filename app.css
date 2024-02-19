@@ -452,7 +452,7 @@ p {
     top: 20vh;
   }
   #hero-section.subpage-section.crew-subpage .wrapper .content {
-    grid-template-rows: 1.8fr 0.2fr;
+    grid-template-rows: 1fr 0.2fr;
   }
   #hero-section.subpage-section.crew-subpage .wrapper .content .slider-media-container {
     grid-row: 1/span 2;
