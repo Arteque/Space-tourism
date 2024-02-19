@@ -264,7 +264,7 @@ p{
         &::before{
           content:"";
           position:absolute;
-          left: -100%;
+          left: -70%;
           right: 95%;
           height: 3px;
           top: 50%;
@@ -352,7 +352,7 @@ p{
     align-items: center;
     gap: 50px;
     text-align: center;
-    padding-block-end: 90px;
+    // padding-block-end: 90px;
   }
   .main-title{
     margin-block: .5rem 1rem;

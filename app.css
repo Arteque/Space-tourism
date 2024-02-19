@@ -315,7 +315,7 @@ p {
   #main-header #main-nav-container ul::before {
     content: "";
     position: absolute;
-    left: -100%;
+    left: -70%;
     right: 95%;
     height: 3px;
     top: 50%;
@@ -417,8 +417,6 @@ p {
           align-items: center;
   gap: 50px;
   text-align: center;
-  -webkit-padding-after: 90px;
-          padding-block-end: 90px;
 }
 #hero-section .main-title {
   margin-block: 0.5rem 1rem;
