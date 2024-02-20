@@ -4,7 +4,7 @@ sliderNavContainer()
 // Navigation and Burger Menu behavior on Click for mobile
 // Functions
 function checkItem(item){
-    if(!item) return
+    if(item === null || item === undefined || !item) return
 }
 
 

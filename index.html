@@ -10,9 +10,21 @@
     <title>Space Tourism Home</title>
 </head>
 <body>
+
     <!-- Website h1 is hidden     -->
     <h1 class="hide-it">Space Tourism</h1>
-    
+    <!--Loader-->
+    <div class="loading-container">
+        <div class="loader-container">
+            <div class="sun"></div>
+            <div class="plan-1"></div>
+            <div class="plan-2"></div>
+        </div>
+        <p class="txt-white barlow txt-uppercase">
+            Download ...
+        </p>
+    </div>
+    <!--Loader-->
     <!-- Header -->
         <header id="main-header">
             <div class="wrapper-big d-flex">
@@ -103,5 +115,12 @@
     <!-- Main Content -->
 
     <script src="app.js"></script>
+    <script>
+        document.onreadystatechange = () => {
+            if(document.readyState == "complete"){
+                document.querySelector(".loading-container").classList.add("hide")
+            }
+        }
+    </script>
 </body>
 </html>
