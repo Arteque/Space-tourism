@@ -424,14 +424,17 @@ p{
       padding-block-start: 15svh;
       .wrapper{
         min-height: auto;
+        .sub-section-main-title{
+          line-height:5rem;
+        }
       }
       .content{
         .slider-media-container{
-          width: 100%;
+          border-block-end:unset;
           .media{
+           
             img{
-              width: 100%;
-              max-width: unset;
+              max-width: 100%;
               &.desktop{
                 display:none;
                 @include desktop{
@@ -488,6 +491,10 @@ p{
       }
       &.technology-subpage{
         background-image:url(./technology/background-technology-tablet.jpg);
+        .slider-text-container{
+          max-width: 460px;
+          margin-inline:auto;
+        }
       }
     }
   }
@@ -517,7 +524,7 @@ p{
               }
             }
             .slider-text-container{
-              max-width: 100%;
+              max-width: 450px;
               width: 100%;
               align-self:end;
               margin-block-end:2rem;
@@ -532,6 +539,27 @@ p{
       }
       &.technology-subpage{
         background-image:url(./technology/background-technology-desktop.jpg);
+        .content{
+          position: relative;
+          max-width: 80%;
+          margin-inline-start: auto;
+          .slider-media-container{
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-self: stretch;
+            justify-self: end;
+          }
+          .wrapper{
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            align-self: center;
+            display: flex;
+            flex-flow: row nowrap;
+            ul{
+              flex-direction: column;
+            }
+          }
+        }
       }
     }
   }
@@ -546,7 +574,7 @@ p{
     align-items: center;
     gap: 50px;
     text-align: center;
-    padding-block-start:15svh;
+    padding-block-start:10svh;
   }
   .main-title{
     margin-block: .5rem 1rem;
@@ -670,6 +698,7 @@ p{
             color: var(--white-50);
             transition: var(--transition);
             cursor: pointer;
+            
             &.current{
               color: var(--white);
               text-decoration: underline 3px;
@@ -688,6 +717,9 @@ p{
               aspect-ratio: 1;
               background-color: var(--white-10);
               border-radius:50%;
+              &:hover{
+                background-color: var(--white-10);
+              }
               &.current{
                 background-color: var(--white);
               }
@@ -703,6 +735,9 @@ p{
                 background-color:transparent;
                 text-decoration: none;
                 font-family: var(--bellefair);
+                &:hover{
+                  background-color: var(--white-10);
+                }
                 &.current{
                   color:var(--dark);
                   background-color: var(--white);
